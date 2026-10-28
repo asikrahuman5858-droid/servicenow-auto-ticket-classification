@@ -1,63 +1,105 @@
-Auto Ticket Classification Using ServiceNow
-📌 Project Overview
+# Auto Ticket Classification Using Flow Designer in ServiceNow
 
-Auto Ticket Classification Using ServiceNow is a project designed to automate the classification of IT support tickets. The system helps categorize incoming tickets based on their descriptions and other relevant details, reducing manual effort and improving the efficiency of IT service management.
+## 📌 Project Overview
 
-By integrating automated classification with ServiceNow, the project aims to streamline ticket handling, improve response times, and support faster incident resolution.
+The Auto Ticket Classification System automates incident classification and assignment using ServiceNow Flow Designer. It classifies tickets based on predefined conditions and routes them to the appropriate support groups, reducing manual work and improving incident management efficiency.
 
-🎯 Objectives
-Automate the classification of IT support tickets.
-Reduce manual ticket categorization and human errors.
-Improve the efficiency of incident management.
-Help support teams prioritize and route tickets appropriately.
-Enhance the overall ServiceNow ticket management process.
-⚙️ Key Features
-Automated Ticket Classification: Classifies tickets based on their descriptions and details.
-ServiceNow Integration: Uses ServiceNow as the platform for managing and tracking tickets.
-Reduced Manual Work: Minimizes the effort required to categorize incoming tickets.
-Improved Ticket Routing: Helps direct tickets to the appropriate support teams.
-Efficient Incident Management: Supports faster ticket processing and resolution.
-🛠️ Technologies Used
-ServiceNow – IT service management and ticket handling.
-JavaScript – ServiceNow scripting and automation, if applicable.
-Machine Learning / Natural Language Processing (NLP) – Automated classification, if implemented.
-ServiceNow Flow Designer / Business Rules – Workflow automation, if applicable.
+## 🎯 Objectives
 
-Note: The technologies listed above should be adjusted to match the actual implementation of the project.
+- Automate incident ticket classification.
+- Assign tickets to the appropriate support groups.
+- Reduce manual effort and classification errors.
+- Improve incident management efficiency.
+- Streamline IT service management workflows.
 
-🔄 Project Workflow
-Ticket Creation: A user submits an IT support ticket through ServiceNow.
-Data Collection: The system collects relevant ticket details, such as the short description and description.
-Ticket Classification: The system analyzes the ticket details and assigns an appropriate category.
-Assignment and Routing: The classified ticket is directed to the relevant support group, where configured.
-Ticket Processing: The support team reviews and resolves the ticket.
-Tracking and Closure: The ticket status is updated in ServiceNow until resolution.
-👥 Team Members
-S. No.	Name	Role
-1	Darvinkumar T	Team Leader
-2	Archana R	Member
-3	NaveenKannan	Member
-4	Ahamed Nifrose	Member
-💡 Benefits
-Saves time by reducing manual classification.
-Improves consistency in ticket categorization.
-Supports efficient ticket assignment and routing.
-Helps IT support teams manage incidents more effectively.
-Improves productivity and service management workflows.
-🚀 Expected Outcome
+## 🛠️ Technologies Used
 
-The project aims to provide an automated and efficient ticket classification solution within ServiceNow. By categorizing tickets accurately and supporting appropriate routing, it can reduce manual workload and improve the overall incident management process.
+- ServiceNow
+- Flow Designer
+- Incident Management
+- Incident Table (`incident`)
+- Conditional Logic and Update Record Actions
 
-🔮 Future Enhancements
-Integrate advanced machine learning models for improved classification accuracy.
-Support multiple ticket categories and priorities.
-Add automatic assignment group recommendations.
-Introduce analytics and dashboards to monitor classification performance.
-Continuously improve the classification model using historical ticket data.
-📄 Conclusion
+## ⚙️ Project Workflow
 
-Auto Ticket Classification Using ServiceNow aims to simplify IT support operations through automated ticket categorization and workflow integration. The solution can help organizations manage support requests more efficiently, reduce repetitive tasks, and improve the overall service delivery process.
+1. A user creates an incident ticket in ServiceNow.
+2. Flow Designer triggers when a new incident record is created.
+3. The flow evaluates the incident description and relevant fields.
+4. Predefined conditions determine the ticket category.
+5. The incident category and assignment group are updated.
+6. The ticket is routed to the appropriate support team.
+7. Unmatched tickets can be sent for manual review.
 
-Project Title: Auto Ticket Classification Using ServiceNow
-Team Leader: Darvinkumar T
-Team Size: 4 Members
+## 🔄 Flow Designer Implementation
+
+### Trigger
+- Trigger Type: Record Created
+- Table: Incident (`incident`)
+
+### Sample Classification Rules
+
+| Incident Type | Category | Assignment Group |
+|---|---|---|
+| Password reset | Inquiry / Help | IT Support |
+| Network issue | Network | Network Support |
+| Laptop issue | Hardware | Hardware Support |
+| Software issue | Software | Application Support |
+| Unknown issue | Manual Review | Service Desk |
+
+*Note: Configure the categories and assignment groups according to your ServiceNow instance.*
+
+### Actions
+- If / Else conditions
+- Update Record
+- Set incident category and subcategory
+- Assign the appropriate support group
+- Handle unmatched tickets
+
+## 👥 Team Members
+
+| S. No. | Name | Role |
+|---|---|---|
+| 1 | Syed Asik Rahuman A | Team Leader |
+| 2 | Mohamed Safwan M | Team Member |
+| 3 | Yaseen Kader | Team Member |
+| 4 | Abdul Rahub Nistar | Team Member |
+| 5 | Ams Jasum | Team Member |
+
+## 🧪 Testing
+
+| Test Case | Expected Result |
+|---|---|
+| Password reset ticket | Assigned to IT Support |
+| Network connectivity ticket | Assigned to Network Support |
+| Hardware-related ticket | Assigned to Hardware Support |
+| Software-related ticket | Assigned to Application Support |
+| Unmatched ticket | Sent for manual review |
+
+## ✅ Expected Outcomes
+
+- Automatic incident classification
+- Faster ticket assignment
+- Reduced manual intervention
+- Improved routing consistency
+- More efficient incident management
+
+## 🔮 Future Enhancements
+
+- AI-based ticket classification
+- Natural Language Processing (NLP)
+- Automated knowledge base recommendations
+- Classification accuracy dashboards
+- Integration with additional ITSM workflows
+
+## 📌 Conclusion
+
+The Auto Ticket Classification Using Flow Designer in ServiceNow project demonstrates how workflow automation can simplify incident management. By applying predefined conditions and automated record updates, the system classifies incidents and routes them to the appropriate support teams, improving efficiency and reducing manual work.
+
+## 📄 Project Details
+
+- **Project Title:** Auto Ticket Classification Using Flow Designer in ServiceNow
+- **Platform:** ServiceNow
+- **Domain:** IT Service Management (ITSM)
+- **Project Type:** Workflow Automation
+- **Team Size:** 5 Members
+- **Team Leader:** Syed Asik Rahuman A
